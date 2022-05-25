@@ -1,0 +1,11 @@
+table {
+  height: 420px;
+  width: 430px;
+  font-size: 1.8em;
+}
+
+.cell {
+  background-color: rgb(174, 100, 156);
+  height: 40px;
+  width: 40px;
+}
