@@ -1,11 +1,56 @@
-table {
-  height: 420px;
-  width: 430px;
-  font-size: 1.8em;
+body {
+  background-image: url(/img/6.webp);
+  color: rgb(184 46 79);
+}
+
+.main-container {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .cell {
-  background-color: rgb(174, 100, 156);
-  height: 40px;
-  width: 40px;
+  background-color: rgb(91, 54, 29);
+  color: bisque;
+  border: 2px solid rgb(244, 185, 204);
+  width: 58px;
+  height: 58px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.h1 {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.easy {
+  margin-top: 10px;
+  background-color: rgb(198, 77, 105);
+  color: bisque;
+  border-color: aliceblue;
+  cursor: pointer;
+}
+.medium {
+  margin-top: 10px;
+  background-color: rgb(198, 77, 105);
+  color: bisque;
+  border-color: aliceblue;
+  cursor: pointer;
+}
+
+.hard {
+  margin-top: 10px;
+  background-color: rgb(198, 77, 105);
+  color: bisque;
+  border-color: aliceblue;
+  cursor: pointer;
+}
+
+.face {
+  background-color: rgba(228, 99, 138, 0.632);
+  border: 2px solid rgb(244, 185, 221);
+  height: 38px;
+  width: 220px;
+  margin-left: 16px;
+  cursor: pointer;
 }

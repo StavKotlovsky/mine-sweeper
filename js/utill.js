@@ -1,46 +1,29 @@
-// function createMat() {
-//   var mat = []
-//   for (var i = 0; i < 4; i++) {
-//     var row = []
-//     for (var j = 0; j < 4; j++) {
-//       row.push('')
-//     }
-//     mat.push(row)
-//   }
-//   return mat
-// }
-
-
-// function renderBoard(board) {
-//   var strHTML = '<table border="0"><tbody>';
-//   for (var i = 0; i < board.length; i++) {
-//     strHTML += '<tr>';
-//     for (var j = 0; j < board[0].length; j++) {
-//       var cell = board[i][j];
-//       var className = 'cell cell-' + i + '-' + j;
-//       strHTML += '<td class="' + className + '"> ' + cell + ' </td>'
-//     }
-//     strHTML += '</tr>'
-//   }
-//   strHTML += '</tbody></table>';
-//   var elBoard = document.querySelector('table.board');
-//   elBoard.innerHTML = strHTML;
-// }
 
 
 function getEmptyCells() {
   var emptyCells = []
   for (var i = 1; i < gBoard.length; i++) {
     for (var j = 0; j < gBoard[0].length - 1; j++) {
-      var cell = gBoard[i][j]
-      if (cell === EMPTY) {
-        emptyCells.push({ i, j })
-      }
+      emptyCells.push({ i, j })
+
     }
   }
   return emptyCells
 }
 
+function countMinesAround(rowIdx, colIdx) {
+  var count = 0
+  for (var i = rowIdx - 1; i <= rowIdx + 1; i++) {
+    if (i < 0 || i > gBoard.length - 1) continue
+    for (var j = colIdx - 1; j <= colIdx + 1; j++) {
+      if (j < 0 || j > gBoard[0].length - 1) continue
+      if (i === rowIdx && j === colIdx) continue
+      var cell = gBoard[i][j]
+      if (cell.isMine) count++
+    }
+  }
+  return count
+}
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -53,10 +36,13 @@ function playSound() {
   sound.play()
 }
 
-// location such as: {i: 2, j: 7}
+function getClassName(location) {
+  var cellClass = `cell-${location.i}-${location.j}`;
+  return cellClass;
+}
+
 function renderCell(location, value) {
-  // Select the elCell and set the value
-  var elCell = document.querySelector(`.cell-${location.i}-${location.j}`);
+  var elCell = document.querySelector('.' + getClassName(location));
   elCell.innerHTML = value;
 }
 
