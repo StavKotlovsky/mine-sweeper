@@ -9,18 +9,24 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body onload="initGame()">
-  <div class="main-container">
 
+<body onload="initGame()">
+  <div class="title">
     <h1>Minesweeper game</h1>
+  </div>
+
+  <div class="main-container">
     <button class="face" onclick="initGame()">😁</button>
+    <h3>Time: <span class="timer"></span></h3>
+    <h2>Lives: <span class="lives"></span></h2>
+    <div class="hints" onclick="checkHints()">Hints left: <span></span></div>
+
     <table>
       <tbody class="board"></tbody>
     </table>
-    <button class="easy" onclick="onLevelClick(4,2)">Easy </button>
-    <button class="medium" onclick="onLevelClick(8,12)">Medium </button>
-    <button class="hard" onclick="onLevelClick(12,30)">Hard </button>
-    <div class="timer">00:00</div>
+    <button class="levels" onclick="onLevelClick(4,2)">Easy </button>
+    <button class="levels" onclick="onLevelClick(8,12)">Medium </button>
+    <button class="levels" onclick="onLevelClick(12,30)">Hard </button>
 
   </div>
   <script src="js/game.js"></script>

@@ -1,56 +1,102 @@
 body {
-  background-image: url(/img/6.webp);
-  color: rgb(184 46 79);
+  background-image: url(/img/6.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main-container {
-  width: 280px;
-  margin: 0 auto;
+  width: 300px;
+  margin: auto auto;
+}
+table {
+  table-layout: fixed;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #c4adadb5;
 }
 
+.cell:hover {
+  background-color: rgba(239, 156, 156, 0.731);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 1s;
+}
 .cell {
-  background-color: rgb(91, 54, 29);
-  color: bisque;
-  border: 2px solid rgb(244, 185, 204);
-  width: 58px;
-  height: 58px;
+  background-color: rgba(56, 3, 19, 0.635);
+  color: rgb(255, 196, 215);
+  border: 3px solid #c4adadb5;
+  padding: 10px;
   text-align: center;
-  font-size: 1.2em;
+  line-height: 0;
 }
 
-.h1 {
+.title::first-letter {
+  font-size: 1.4em;
+}
+.title {
+  color: #dc2020ea;
   text-align: center;
   margin-left: 20px;
+  text-shadow: 1px -1px 1px #ffffffd3;
 }
 
-.easy {
+.levels {
   margin-top: 10px;
-  background-color: rgb(198, 77, 105);
+  background-color: #f82a2aa9;
   color: bisque;
   border-color: aliceblue;
   cursor: pointer;
-}
-.medium {
-  margin-top: 10px;
-  background-color: rgb(198, 77, 105);
-  color: bisque;
-  border-color: aliceblue;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
-.hard {
-  margin-top: 10px;
-  background-color: rgb(198, 77, 105);
-  color: bisque;
-  border-color: aliceblue;
-  cursor: pointer;
+.face:hover {
+  transform: scale(1.3);
+  transition: 1s;
+  background-color: rgba(253, 79, 131, 0.596);
 }
-
 .face {
-  background-color: rgba(228, 99, 138, 0.632);
+  background-color: rgba(56, 3, 19, 0.635);
+  color: rgb(251, 224, 224);
   border: 2px solid rgb(244, 185, 221);
   height: 38px;
   width: 220px;
-  margin-left: 16px;
+  margin: 5px auto;
   cursor: pointer;
+  display: block;
+  font-size: 1.4em;
+}
+
+h3 {
+  position: absolute;
+  color: #dc2020ea;
+  font-size: 1.5em;
+  margin-left: 195px;
+  margin-top: 15px;
+}
+
+h2 {
+  color: #dc2020ea;
+  font-size: 1.5em;
+}
+
+.hints:hover {
+  transition: 1s;
+  transform: scale(1);
+  background-color: rgba(239, 156, 156, 0.731);
+}
+
+.hints {
+  /* background-color: #dc2020ea; */
+  font-size: 1.2em;
+  color: #fde7e7ea;
+  background-color: #dc2020c0;
+  cursor: pointer;
+  margin-left: -145px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.shown {
+  transition: 1s;
+  background-color: rgba(244, 15, 84, 0.804);
 }
