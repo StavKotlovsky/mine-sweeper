@@ -218,7 +218,7 @@ function checkVictory() {
     elBtn.innerHTML = 'Victory ' + '😎' + ' !!!'
     gGame.isOn = false
     clearInterval(gTimeInterval)
-    console.log('yowwww winnn');
+    // console.log('yowwww winnn');
   }
 }
 
