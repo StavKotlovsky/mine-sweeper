@@ -237,9 +237,6 @@ function renderLives() {
   }
 }
 
-function checkHints(elCell, i, j) {
-
-}
 
 
 
